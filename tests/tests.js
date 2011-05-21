@@ -6,8 +6,11 @@ function testThemAll(){
     console.log ('\n---- testing all the functions ---- ');
     for (var level in logger){
         logger[level]('this is a '+level);
+        logger[level]('this \nis \n\ra\r stupid \rdarn\r'+level+' with newlines.');
     }
+
     console.log ('---- done testing  ---- \n');
+
 }
 
 testThemAll();
@@ -17,7 +20,8 @@ logger = require('../lib/spruce.js').init();
 testThemAll();
 
 var opts = {'useColor' : true,
-            'dateFormat' : '[%A, %B %d %y, %I:%M:%S.%f %p]',
+            'dateFormat' : '[%A, %B %d %y, %I:%M:%S.%l %p]',
+            'stripNewlines' : false,
             'methods' : {'info' : { 'color' : 32}, 
                          'trace' : {'color' : 30},
                         'debug' : { 'color' : 33},
@@ -38,3 +42,6 @@ var opts = {'useColor' : true,
 
 logger = require('../lib/spruce.js').init(opts); 
 testThemAll();
+
+
+

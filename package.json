@@ -1,5 +1,6 @@
 { 
     "name" : "spruce",
+    "engines": ["node >= 0.4.0"],
     "version" : "0.1.3",
     "description" : "Spruce Configurable Logging Library",
     "homepage" : "https://github.com/MarkPNeyer/spruce",
@@ -18,7 +19,7 @@
     { "lib": "./lib",
       "test": "./tests" 
     },
-    "depdenencies" : {},
+    "dependencies" : {},
     "devDependencies" : {},
     "main" : "./lib/spruce.js"
 }
